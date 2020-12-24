@@ -1,0 +1,14 @@
+/* ALL TEXT */
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+/* END ALL TEXT */
+
+form input {
+    width: 200px;
+    margin: 5px 0px 5px 5px;
+    border: 1px solid;
+    border-radius: 4px; 
+}
+
