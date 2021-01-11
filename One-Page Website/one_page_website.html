@@ -24,64 +24,141 @@
 		<!-- PHOTOS -->
 		<section>
 			<div id="Photos">
-				<h1>Photos</h1>
-				<div>
-					
-					<!-- PHOTO CONTAINER 1 -->
-					<div>
-						<img src="./images/thumb/thumbnail_1.png" alt="">
+				<!-- Images used to open lightbox -->
+				<div class="row">
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_1.png" onclick="openModal();currentSlide(1)" class= "hover-shadow">
 					</div>
-					<!-- END PHOTO CONTAINER 1 -->
-					
-					<!-- PHOTO CONTAINER 2 -->
-					<div>
-						<img src="./images/thumb/thumbnail_2.png" alt="">
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_2.png" onclick="openModal();currentSlide(2)" class= "hover-shadow">
 					</div>
-					<!-- END PHOTO CONTAINER 2 -->
-					
-					<!-- PHOTO CONTAINER 3 -->
-					<div>
-						<img src="./images/thumb/thumbnail_3.png" alt="">
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_3.png" onclick="openModal();currentSlide(3)" class= "hover-shadow">
 					</div>
-					<!-- END PHOTO CONTAINER 3 -->
-					
-					<!-- PHOTO CONTAINER 4 -->
-					<div>
-						<img src="./images/thumb/thumbnail_4.png" alt="">
-					</div>
-					<!-- END PHOTO CONTAINER 4 -->
-					
-					<!-- PHOTO CONTAINER 5 -->
-					<div>
-						<img src="./images/thumb/thumbnail_5.png" alt="">
-					</div>
-					<!-- END PHOTO CONTAINER 5 -->
-					
-					<!-- PHOTO CONTAINER 6 -->
-					<div>
-						<img src="./images/thumb/thumbnail_6.png" alt="">
-					</div>
-					<!-- END PHOTO CONTAINER 6 -->
-					
-					<!-- PHOTO CONTAINER 7 -->
-					<div>
-						<img src="./images/thumb/thumbnail_7.png" alt="">
-					</div>
-					<!-- END PHOTO CONTAINER 7 -->
-					
-					<!-- PHOTO CONTAINER 8 -->
-					<div>
-						<img src="./images/thumb/thumbnail_8.png" alt="">
-					</div>
-					<!-- END PHOTO CONTAINER 8 -->
-					
-					<!-- PHOTO CONTAINER 9 -->
-					<div>
-						<img src="./images/thumb/thumbnail_9.png" alt="">
-					</div>
-					<!-- END PHOTO CONTAINER 9 -->
-					
 				</div>
+				<div class="row">
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_4.png" onclick="openModal();currentSlide(4)" class= "hover-shadow">
+					</div>
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_5.png" onclick="openModal();currentSlide(5)" class= "hover-shadow">
+					</div>
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_6.png" onclick="openModal();currentSlide(6)" class= "hover-shadow">
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_7.png" onclick="openModal();currentSlide(7)" class= "hover-shadow">
+					</div>
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_8.png" onclick="openModal();currentSlide(8)" class= "hover-shadow">
+					</div>
+					<div class="column">
+						<img src="Images/Thumb/thumbnail_9.png" onclick="openModal();currentSlide(9)" class= "hover-shadow">
+					</div>
+				</div>
+				<!-- End of Images that open lightbox -->
+
+				<!-- The Lightbox -->
+				<div id="myModal" class="modal">    <!-- Why both id and class? -->
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+						
+						<div class="mySlides">
+							<div class="numbertext">1/9</div>
+							<img src="Images/Thumb/thumbnail_1.png" style="width:100%">     <!-- if the width is still making the images look terrible, come back to these lines of code -->  
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">2/9</div>
+							<img src="Images/Thumb/thumbnail_2.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">3/9</div>
+							<img src="Images/Thumb/thumbnail_3.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">4/9</div>
+							<img src="Images/Thumb/thumbnail_4.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">5/9</div>
+							<img src="Images/Thumb/thumbnail_5.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">6/9</div>
+							<img src="Images/Thumb/thumbnail_6.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">7/9</div>
+							<img src="Images/Thumb/thumbnail_7.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">8/9</div>
+							<img src="Images/Thumb/thumbnail_8.png" style="width:100%">      
+						</div>
+						<div class="mySlides">
+							<div class="numbertext">9/9</div>
+							<img src="Images/Thumb/thumbnail_9.png" style="width:100%">      
+						</div>
+
+						<!-- Next/Previous Controls -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!-- Caption Text -->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<!-- Thumbnail Image Control -->
+						<div class="row">
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_1.png" onclick="currentSlide(1)" alt="Chef Boyardee in stock!">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_2.png" onclick="currentSlide(2)" alt="Good ole Susan">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_3.png" onclick="currentSlide(3)" alt="Come hungry, leave happy!">
+							</div>
+						</div>
+						<div class="row">	
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_4.png" onclick="currentSlide(4)" alt="Fresh produce every day">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_5.png" onclick="currentSlide(5)" alt="Lots of healthy options">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_6.png" onclick="currentSlide(6)" alt="Socialize with members of your community">
+							</div>
+						</div>
+						<div class="row">
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_7.png" onclick="currentSlide(7)" alt="Plenty of options for the holidays">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_8.png" onclick="currentSlide(8)" alt="Good ole Frank">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="Images/Thumb/thumbnail_9.png" onclick="currentSlide(9)" alt="Following CDC Guidelines to keep you safe">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+					
+					
+					
+				
 			</div>
 		</section>
 		<!-- END PHOTOS -->
@@ -122,6 +199,6 @@
 			<p>The San Diego Food Bank is a 501(C)(3) nonprofit organization. Federal tax I.D. #20-4374795</p>
 		</footer>
 					
-		
+		<script src="JS/one_page_website.js"></script>
 	</body>
 </html>
