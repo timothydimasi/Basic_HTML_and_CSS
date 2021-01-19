@@ -6,14 +6,16 @@
         <title>TD | Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./css/portfolio_style.css">
     </head>
+
     <body class="background">
 
         <!-- NAV BAR -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
         <!-- END NAV BAR -->
 
@@ -31,20 +33,84 @@
 
         <!-- VIDEO TEXT -->
         <div class="Video_Text">
-            <h1 class="white-text">Tim DiMasi's Portfolio</h1>
-            <strong>
-                <p class="center">
-                    <q>The computer programmer is a creator of universes for which he alone is the lawgiver. 
-                    <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
-                    <br>field of battle and to command such unswervingly dutiful actors or troops.
-                    </q>
-                    <br> - Joseph Weizenbaum
-                    <br>
-                    <br> My name is Tim DiMasi and welcome to my portfolio website. On it, I will tell you about my background and experience.
-                    <br>
-                    <br> Thank you for stopping by and enjoy!
-                </p>
-            </strong>
+            <h1 style="color:white;">Tim DiMasi's Portfolio</h1>
+            <p>
+                <strong>
+                    <center>
+                        <q>The computer programmer is a creator of universes for which he alone is the lawgiver. 
+                        <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                        <br>field of battle and to command such unswervingly dutiful actors or troops.
+                        </q>
+                        <br> - Joseph Weizenbaum
+                        <br>
+                        <br> My name is Tim DiMasi and welcome to my portfolio website. On it, I will tell you about my background and experience.
+                        <br>
+                        <br> Thank you for stopping by and enjoy!
+                    </center>
+                </strong>
+            </p>    
+        </div>
+
+        <!-- SLIDESHOW SECTION -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images" src="images/me.png" style="width:100%">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images" src="images/html_css_js.png" style="width:100%">
+                        <div class="text">I am a full-stack software developer <br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images" src="images/python.jpg" style="width:100%">
+                        <div class="text">the programming language Python,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images" src="images/react.png" style="width:100%">
+                        <div class="text">popular libraries & frameworks like React and Bootstrap,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images" src="images/sql.jpg" style="width:100%">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images" src="images/mail.png" style="width:100%">
+                        <div class="text">
+                            <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                        </div>
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center;">
+
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+
+                </div>
+            </div>
         </div>
 
         <!-- ABOUT SECTION -->
@@ -71,10 +137,8 @@
             <!-- LEFT COLUMN -->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <p>
-                    You can view my programming projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/timothydimasi" target="_blank">Tim's GitHub</a></p>
+                <p>You can view my programming projects on my GitHub profile here:<br>
+                    <center><a href="https://github.com/timothydimasi" target="_blank">Tim's GitHub</a></center>
                 </p>
             </div>
             <!-- RIGHT COLUMN -->
@@ -84,23 +148,22 @@
         </div>
 
         <!-- CONTACT SECTION -->
-        <div class="Row" id="Contact">
-            <!-- CONTACT IMAGE, LEFT COLUMN -->
-            <div class="Column_2 Column_tall">
-                <img src="./images/the_sign.png" alt="Your sign...">
-            </div>
-            <!-- CONTACT FORM, RIGHT COLUMN -->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!-- THIS SPECIFIES WHERE AND HOW TO SEND THE FORM DATA; WE ARE LEAVING IT BLANK -->
-                <form action="" method="POST"> <!-- HERE WE ARE UTILIZING A 3RD PARTY SERVICE TO SUBMIT THE CONTACT FORM DATA, INSERT YOUR FORMSPREE ENDPOINT IN THE ACTION ATTRIBUTE -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form_popup" id="myForm">
+                <form action="https://formspree.io.info@learncodinganywhere.com" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                    <input type="text" placeholder="Enter your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Type your message here" name="message">
+                        
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -108,9 +171,12 @@
         <!-- FOOTER SECTION -->
         <footer>
             <p>
-                <p class="center">&copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <center>&copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></center>
                 <br>
             </p>
         </footer>
+
+        <script src="js/portfolio.js"></script>
+
     </body>
 </html>
